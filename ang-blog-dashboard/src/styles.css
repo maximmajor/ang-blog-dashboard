@@ -5,7 +5,7 @@
 
 @import '~bootstrap/dist/css/bootstrap.min.css'; 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
+@import "~ngx-toastr/toastr";
 
 :root{
     --primary-color: #026467;
@@ -16,7 +16,7 @@
 
 body{ 
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--body-text-color);
     display: contents;
 }
@@ -49,7 +49,7 @@ body{
 }
 
 .text-theme-primary{
-    background-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 input[type = text], input[type = email] {
@@ -60,9 +60,13 @@ input[type = text], input[type = email] {
 }
 
 .btn-theme {
-    height: 58px;
+
     border: none;
     color: aliceblue;
     font-size: 13px;
     background-color: var(--primary-color);
 }
+
+::ng-deep angular-editor-toolbar button i {
+    font-family: FontAwesome !important; 
+    } 
