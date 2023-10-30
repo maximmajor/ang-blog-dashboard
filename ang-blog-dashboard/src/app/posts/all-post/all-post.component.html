@@ -38,6 +38,7 @@
                                 <td>{{post.data.category.category}}</td>
                                 <td>{{post.data.createdAt.toMillis() | date}}</td>
                                 <td><button class="btn btn-sm btn-warning" routerLink="/posts/new" [queryParams]="{id: post.id}">Edit</button></td>
+                                <td><button class="btn btn-sm btn-danger ml-2" (click) = 'onDelete(post.data.postImgPath, post.id)'>Delete</button></td>
                             </tr>
                         </tbody>
                     </table>

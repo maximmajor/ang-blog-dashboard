@@ -67,4 +67,17 @@ this.storage.ref(filePath).getDownloadURL().subscribe(URL=>{
     })
 
   }
+
+  deleteImage(postImgPath: string, id: any){
+    this.storage.storage.refFromURL(postImgPath).delete().then(() => {
+      this.deleteData(id)
+
+    })
+  }
+
+  deleteData(id: any){
+this.afs.doc(`posts/${id}`).delete().then(() => {
+  this.toastr.warning('Data Deleted....!')
+})
+  }
 }

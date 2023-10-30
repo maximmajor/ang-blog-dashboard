@@ -19,4 +19,8 @@ constructor(private postService: PostsService,){
     })
   }
 
+  onDelete(postImgPath: string, id: any){
+    this.postService.deleteImage(postImgPath, id)
+
+  }
 }
