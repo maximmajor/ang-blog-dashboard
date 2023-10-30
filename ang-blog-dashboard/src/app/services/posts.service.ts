@@ -80,4 +80,10 @@ this.afs.doc(`posts/${id}`).delete().then(() => {
   this.toastr.warning('Data Deleted....!')
 })
   }
+
+  markFeatured(id: any, featuredData: Partial<unknown>){
+    this.afs.doc(`posts/${id}`).update(featuredData).then(() => {
+      this.toastr.info('Featured status updated')
+    })
+  }
 }

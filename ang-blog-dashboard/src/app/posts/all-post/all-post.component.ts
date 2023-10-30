@@ -23,4 +23,13 @@ constructor(private postService: PostsService,){
     this.postService.deleteImage(postImgPath, id)
 
   }
+
+  onFeatured(id: any, value: any){
+    const featuredData = {
+      isFeatured: value
+    }
+    console.log(featuredData)
+    this.postService.markFeatured(id, featuredData)
+
+  }
 }
