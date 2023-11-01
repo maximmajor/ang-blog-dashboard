@@ -5,10 +5,10 @@
             <p class="text-center mb-5">You can add new categorie from here ..!</p>
 
             <form class="form-inline text-center" #categoryForm='ngForm' (ngSubmit)="onSubmit(categoryForm)">
-                <div class="col-md-10">
+                <div class="col-md-10 ">
                     <input type="text" 
                     name="category" 
-                    class="form-control-lg  shadow-effect"
+                    class="form-control-lg  shadow-effect "
                     placeholder="Add New Category" 
                     #newCategory='ngModel' 
                     [(ngModel)]= 'formCategory'
@@ -19,7 +19,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-2">
+                <div class="col-md-2 mt-2">
                     <button class="btn btn-block btn-info mb-2 btn-theme" [disabled]="categoryForm.invalid"> {{formStatus}}
                         Category</button>
                 </div>
@@ -43,7 +43,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor='let category of categoryArray; let i = index'>
-                                <td>{{i + 1}}</td>
+                                <td >{{i + 1}}</td>
                                 <td>{{category.data.category}}</td>
                                 <td class="btn btn-sm btn-warning" (click)="onEdit(category.data.category, category.id)"> Edit</td>
                                 <td class="btn btn-sm btn-danger ml-2" (click)="onDelete(category.id)"> delete</td>
